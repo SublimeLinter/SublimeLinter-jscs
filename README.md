@@ -3,6 +3,8 @@ SublimeLinter-jscs
 
 This linter plugin for [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter3) provides an interface to [jscs](https://github.com/mdevils/node-jscs). It will be used with files that have the “javascript” syntax.
 
+![SublimeLinter-jscs](/demo.gif "SublimeLinter-jscs plugin demo")
+
 ## Installation
 SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Installation).
 

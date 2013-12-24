@@ -24,7 +24,7 @@ class Jscs(Linter):
         r'.+?\<error line=\"(?P<line>\d+)\" '
         r'column=\"(?P<col>\d+)\" '
         r'severity=\"(?P<error>error)\" '
-        r'message=\"(?P<message>.+)\" '
+        r'message=\"(?P<message>.+)\" source'
     )
     multiline = True
     # currently jscs does not accept stdin so this does not work
