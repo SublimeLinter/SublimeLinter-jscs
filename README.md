@@ -1,4 +1,4 @@
-SublimeLinter-jscs
+[SublimeLinter](https://github.com/SublimeLinter/SublimeLinter3)-[jscs](https://github.com/mdevils/node-jscs)
 =========================
 
 This linter plugin for [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter3) provides an interface to [jscs](https://github.com/mdevils/node-jscs). It will be used with files that have the “javascript” syntax.
