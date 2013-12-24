@@ -23,7 +23,8 @@ class Jscs(Linter):
     regex = (
         r'.+?\<error line=\"(?P<line>\d+)\" '
         r'column=\"(?P<col>\d+)\" '
-        r'severity=\"(?P<error>error)\" '
+        # jscs always reports with error severity; show as warning
+        r'severity=\"(?P<warning>error)\" '
         r'message=\"(?P<message>.+)\" source'
     )
     multiline = True
