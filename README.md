@@ -18,7 +18,9 @@ Before using this plugin, you must ensure that `jscs` is installed on your syste
    npm install -g jscs
    ```
 
-1. If you are using `nvm` and `zsh`, ensure that the line to load `nvm` is in `.zshenv` and not `.zshrc`.
+1. If you are using `nvm` and `zsh`, ensure that the line to load `nvm` is in `.zprofile` and not `.zshrc`.
+
+1. If you are using `zsh` and `oh-my-zsh`, do not load the `nvm` plugin for `oh-my-zsh`.
 
 Once jscs is installed, you can proceed to install the SublimeLinter-jscs plugin if it is not yet installed.
 
