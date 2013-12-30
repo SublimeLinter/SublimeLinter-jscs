@@ -21,11 +21,11 @@ class Jscs(Linter):
     executable = 'jscs'
     cmd = 'jscs -r checkstyle'
     regex = (
-        r'.+?\<error line=\"(?P<line>\d+)\" '
+        r'^\s+?\<error line=\"(?P<line>\d+)\" '
         r'column=\"(?P<col>\d+)\" '
         # jscs always reports with error severity; show as warning
         r'severity=\"(?P<warning>error)\" '
-        r'message=\"(?P<message>.+)\" source'
+        r'message=\"(?P<message>.+)\" source=\"jscs\" />'
     )
     multiline = True
     # currently jscs does not accept stdin so this does not work
