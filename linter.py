@@ -17,8 +17,7 @@ class Jscs(Linter):
 
     """Provides an interface to jscs."""
 
-    syntax = ('javascript')
-    executable = 'jscs'
+    syntax = ('javascript', 'html', 'html 5')
     cmd = 'jscs -r checkstyle'
     regex = (
         r'^\s+?\<error line=\"(?P<line>\d+)\" '
@@ -28,6 +27,5 @@ class Jscs(Linter):
         r'message=\"(?P<message>.+)\" source=\"jscs\" />'
     )
     multiline = True
-    # currently jscs does not accept stdin so this does not work
-    # selectors = {'html': 'source.js.embedded.html'}
+    selectors = {'html': 'source.js.embedded.html'}
     tempfile_suffix = 'js'
