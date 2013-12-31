@@ -20,11 +20,11 @@ class Jscs(Linter):
     syntax = ('javascript', 'html', 'html 5')
     cmd = 'jscs -r checkstyle'
     regex = (
-        r'^\s+?\<error line=\"(?P<line>\d+)\" '
-        r'column=\"(?P<col>\d+)\" '
+        r'^\s+?<error line="(?P<line>\d+)" '
+        r'column="(?P<col>\d+)" '
         # jscs always reports with error severity; show as warning
-        r'severity=\"(?P<warning>error)\" '
-        r'message=\"(?P<message>.+)\" source=\"jscs\" />'
+        r'severity="(?P<warning>error)" '
+        r'message="(?P<message>.+?)"'
     )
     multiline = True
     selectors = {'html': 'source.js.embedded.html'}
