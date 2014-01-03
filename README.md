@@ -1,12 +1,12 @@
-[SublimeLinter](https://github.com/SublimeLinter/SublimeLinter3)-[jscs](https://github.com/mdevils/node-jscs)
+[SublimeLinter](http://sublimelinter.readthedocs.org)-[jscs](https://github.com/mdevils/node-jscs)
 =========================
 
-This linter plugin for [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter3) provides an interface to [jscs](https://github.com/mdevils/node-jscs). It will be used with files that have the “javascript” syntax.
+This linter plugin for [SublimeLinter](http://sublimelinter.readthedocs.org) provides an interface to [jscs](https://github.com/mdevils/node-jscs). It will be used with files that have the “Javascript” syntax.
 
-![SublimeLinter-jscs](/demo.gif "SublimeLinter-jscs plugin demo")
+![SublimeLinter-jscs](demo.gif "SublimeLinter-jscs plugin demo")
 
 ## Installation
-SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Installation).
+SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here](http://sublimelinter.readthedocs.org/en/latest/installation.html).
 
 ### Linter installation
 Before using this plugin, you must ensure that `jscs` is installed on your system. To install `jscs`, do the following:
@@ -18,7 +18,7 @@ Before using this plugin, you must ensure that `jscs` is installed on your syste
    npm install -g jscs
    ```
 
-1. If you are using `nvm` and `zsh`, ensure that the line to load `nvm` is in `.zprofile` and not `.zshrc`.
+1. If you are using `nvm` and `zsh`, ensure that the line to load `nvm` is in `.zshenv` and not `.zshrc`.
 
 1. If you are using `zsh` and `oh-my-zsh`, do not load the `nvm` plugin for `oh-my-zsh`.
 
@@ -34,7 +34,9 @@ To install via Package Control, do the following:
 1. When the plugin list appears, type `jscs`. Among the entries you should see `SublimeLinter-jscs`. If that entry is not highlighted, use the keyboard or mouse to select it.
 
 ## Settings
-For general information on how SublimeLinter works with settings, please see [Settings](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Settings). For information on generic linter settings, please see [Linter Settings](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Linter-Settings).
+For general information on how SublimeLinter works with settings, please see [Settings](http://sublimelinter.readthedocs.org/en/latest/settings.html). For information on generic linter settings, please see [Linter Settings](http://sublimelinter.readthedocs.org/en/latest/linter_settings.html).
+
+Since this plugin is executing `jscs` on your system, you may use `.jscs.json` files to configure its behavior. See the [jscs documentation](https://github.com/mdevils/node-jscs#configuration) for more information.
 
 ## Contributing
 If you would like to contribute enhancements or fixes, please do the following:

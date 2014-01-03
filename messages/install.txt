@@ -7,4 +7,4 @@ This linter plugin for SublimeLinter provides an interface to jscs.
 Before this plugin will activate, you *must*
 follow the installation instructions here:
 
-https://github.com/i-akhmadullin/SublimeLinter-jscs
+https://github.com/SublimeLinter/SublimeLinter-jscs
