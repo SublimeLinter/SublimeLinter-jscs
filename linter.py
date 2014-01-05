@@ -19,7 +19,6 @@ class Jscs(Linter):
 
     syntax = ('javascript', 'html', 'html 5')
     cmd = 'jscs -r checkstyle'
-    config_file = ('-c', '.jscs.json')
     regex = (
         r'^\s+?<error line="(?P<line>\d+)" '
         r'column="(?P<col>\d+)" '
@@ -30,3 +29,4 @@ class Jscs(Linter):
     multiline = True
     selectors = {'html': 'source.js.embedded.html'}
     tempfile_suffix = 'js'
+    config_file = ('--config', '.jscs.json', '~')
