@@ -19,6 +19,7 @@ class Jscs(Linter):
 
     syntax = ('javascript', 'html', 'html 5')
     cmd = 'jscs -r checkstyle'
+    config_file = ('-c', '.jscs.json')
     regex = (
         r'^\s+?<error line="(?P<line>\d+)" '
         r'column="(?P<col>\d+)" '
