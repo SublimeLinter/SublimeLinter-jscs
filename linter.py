@@ -29,3 +29,4 @@ class Jscs(Linter):
     multiline = True
     selectors = {'html': 'source.js.embedded.html'}
     tempfile_suffix = 'js'
+    config_file = ('--config', '.jscs.json', '~')
