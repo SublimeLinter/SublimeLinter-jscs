@@ -5,8 +5,6 @@ This linter plugin for [SublimeLinter](http://sublimelinter.readthedocs.org) pro
 
 ![SublimeLinter-jscs](demo.gif "SublimeLinter-jscs plugin demo")
 
-**Note**: Whereas jscs only looks in the current directory, this linter will look in the file hierarchy up to root and then in the user’s home directory for a .jscs.json config file.
-
 ## Installation
 SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here](http://sublimelinter.readthedocs.org/en/latest/installation.html).
 
@@ -39,6 +37,8 @@ To install via Package Control, do the following:
 For general information on how SublimeLinter works with settings, please see [Settings](http://sublimelinter.readthedocs.org/en/latest/settings.html). For information on generic linter settings, please see [Linter Settings](http://sublimelinter.readthedocs.org/en/latest/linter_settings.html).
 
 Since this plugin is executing `jscs` on your system, you may use `.jscs.json` files to configure its behavior. See the [jscs documentation](https://github.com/mdevils/node-jscs#configuration) for more information.
+
+**Note**: Whereas `jscs` only looks in the linted file’s directory for a `.jscs.json` file, this linter plugin extends that behavior by searching the file hierarchy up to the root directory and then in the user’s home directory.
 
 ## Contributing
 If you would like to contribute enhancements or fixes, please do the following:
