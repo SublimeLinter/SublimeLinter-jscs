@@ -19,6 +19,9 @@ class Jscs(Linter):
 
     syntax = ('javascript', 'html', 'html 5')
     cmd = 'jscs -r checkstyle'
+    version_args = '--version'
+    version_re = r'(?P<version>\d+\.\d+\.\d+)'
+    version_requirement = '>= 1.0.10'  # 1.0.10 introduced checkstyle reporter
     regex = (
         r'^\s+?<error line="(?P<line>\d+)" '
         r'column="(?P<col>\d+)" '
