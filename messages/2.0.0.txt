@@ -1,0 +1,5 @@
+SublimeLinter-jscs 2.0.0
+-------------------------
+The default configuration file for `jscs` is now
+`.jscsrc` instead of `.jscs.json`. Please consider
+renaming this file.
