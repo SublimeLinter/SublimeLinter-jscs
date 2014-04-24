@@ -10,7 +10,7 @@
 
 """This module exports the jscs plugin class."""
 
-from SublimeLinter.lint import Linter
+from SublimeLinter.lint import Linter, util
 
 
 class Jscs(Linter):
@@ -18,18 +18,16 @@ class Jscs(Linter):
     """Provides an interface to jscs."""
 
     syntax = ('javascript', 'html')
-    cmd = 'jscs -r checkstyle'
+    cmd = 'jscs -r inlinesingle'
     version_args = '--version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
-    version_requirement = '>= 1.0.10'  # 1.0.10 introduced checkstyle reporter
-    regex = (
-        r'^\s+?<error line="(?P<line>\d+)" '
-        r'column="(?P<col>\d+)" '
-        # jscs always reports with error severity; show as warning
-        r'severity="(?P<warning>error)" '
-        r'message="(?P<message>.+?)"'
-    )
-    multiline = True
+    version_requirement = '>= 1.4.0'  # 1.0.10 introduced inlinesingle reporter
+    regex = r'''(?xi)
+        ^.+:\s* # filename
+        (?:line.(?P<line>\d+),.col.(?P<col>\d+),.)
+        (?P<message>.*)
+    '''
+    error_stream = util.STREAM_STDOUT
     selectors = {'html': 'source.js.embedded.html'}
     tempfile_suffix = 'js'
     config_file = ('--config', '.jscsrc', '~')
