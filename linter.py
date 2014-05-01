@@ -18,10 +18,10 @@ class Jscs(Linter):
     """Provides an interface to jscs."""
 
     syntax = ('javascript', 'html')
-    cmd = 'jscs -r inlinesingle'
+    cmd = 'jscs -r inlinesingle'  # assumes that https://github.com/mdevils/node-jscs/pull/348 is merged
     version_args = '--version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
-    version_requirement = '>= 1.4.0'  # 1.0.10 introduced inlinesingle reporter
+    version_requirement = '>= 1.0.10'  # 1.0.10 introduced checkstyle reporter
     regex = r'''(?xi)
         ^.+:\s* # filename
         (?:line.(?P<line>\d+),.col.(?P<col>\d+),.)
@@ -31,3 +31,4 @@ class Jscs(Linter):
     selectors = {'html': 'source.js.embedded.html'}
     tempfile_suffix = 'js'
     config_file = ('--config', '.jscsrc', '~')
+    multiline = False
