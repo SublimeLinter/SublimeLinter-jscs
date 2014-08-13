@@ -21,7 +21,7 @@ class Jscs(Linter):
     cmd = 'jscs -r checkstyle'
     version_args = '--version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
-    version_requirement = '>= 1.0.10'  # 1.0.10 introduced checkstyle reporter
+    version_requirement = '>= 1.5.9'  # 1.5.9 introduced reading from stdin
     regex = (
         r'^\s+?<error line="(?P<line>\d+)" '
         r'column="(?P<col>\d+)" '
@@ -31,5 +31,4 @@ class Jscs(Linter):
     )
     multiline = True
     selectors = {'html': 'source.js.embedded.html'}
-    tempfile_suffix = 'js'
     config_file = ('--config', '.jscsrc', '~')
