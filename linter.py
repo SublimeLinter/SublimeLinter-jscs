@@ -17,7 +17,7 @@ class Jscs(Linter):
 
     """Provides an interface to jscs."""
 
-    syntax = ('javascript', 'html', 'javascriptnext')
+    syntax = ('javascript', 'html', 'javascriptnext', 'javascript (jsx)')
     cmd = 'jscs -r checkstyle'
     version_args = '--version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
