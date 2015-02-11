@@ -24,7 +24,7 @@ Before using this plugin, you must ensure that `jscs` is installed on your syste
 
 1. If you are using `zsh` and `oh-my-zsh`, do not load the `nvm` plugin for `oh-my-zsh`.
 
-**Note:** This plugin requires `jscs` 1.0.10 or later.
+**Note:** This plugin requires `jscs` 1.0.10 or later, though it requires 1.9.0 or later for JSX support.
 
 ### Linter configuration
 In order for `jscs` to be executed by SublimeLinter, you must ensure that its path is available to SublimeLinter. Before going any further, please read and follow the steps in [“Finding a linter executable”](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#finding-a-linter-executable) through “Validating your PATH” in the documentation.
@@ -44,6 +44,16 @@ To install via Package Control, do the following:
 For general information on how SublimeLinter works with settings, please see [Settings](http://sublimelinter.readthedocs.org/en/latest/settings.html). For information on generic linter settings, please see [Linter Settings](http://sublimelinter.readthedocs.org/en/latest/linter_settings.html).
 
 Since this plugin is executing `jscs` on your system, you may use `.jscsrc` files to configure its behavior. See the [jscs documentation](https://github.com/mdevils/node-jscs#configuration) for more information.
+
+If you wish to run against `jsx` files, you will need to install [esprima-fb](https://www.npmjs.com/package/esprima-fb)
+with `npm install esprima-fb` add the following lines to your `.jscsrc` file:
+
+```json
+...
+    "esprima": "esprima-fb",
+    "fileExtensions": [".js", ".jsx"],
+...
+```
 
 **Note**: Whereas `jscs` only looks in the linted file’s directory for a `.jscsrc` file, this linter plugin extends that behavior by searching the file hierarchy up to the root directory and then in the user’s home directory.
 
