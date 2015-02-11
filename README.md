@@ -43,7 +43,7 @@ To install via Package Control, do the following:
 ## Settings
 For general information on how SublimeLinter works with settings, please see [Settings](http://sublimelinter.readthedocs.org/en/latest/settings.html). For information on generic linter settings, please see [Linter Settings](http://sublimelinter.readthedocs.org/en/latest/linter_settings.html).
 
-Since this plugin is executing `jscs` on your system, you may use `.jscsrc` files to configure its behavior. See the [jscs documentation](https://github.com/mdevils/node-jscs#configuration) for more information.
+Since this plugin is executing `jscs` on your system, you may use `.jscsrc` files to configure its behavior. See the [jscs documentation](http://jscs.info/overview.html#options) for more information.
 
 If you wish to run against `jsx` files, you will need to install [esprima-fb](https://www.npmjs.com/package/esprima-fb)
 with `npm install -g esprima-fb` add the following lines to your `.jscsrc` file:
@@ -54,8 +54,6 @@ with `npm install -g esprima-fb` add the following lines to your `.jscsrc` file:
     "fileExtensions": [".js", ".jsx"],
 ...
 ```
-
-**Note**: Whereas `jscs` only looks in the linted file’s directory for a `.jscsrc` file, this linter plugin extends that behavior by searching the file hierarchy up to the root directory and then in the user’s home directory.
 
 ## Contributing
 If you would like to contribute enhancements or fixes, please do the following:
