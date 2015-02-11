@@ -3,7 +3,7 @@ SublimeLinter-jscs
 
 [![Build Status](https://travis-ci.org/SublimeLinter/SublimeLinter-jscs.svg?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-jscs)
 
-This linter plugin for [SublimeLinter](http://sublimelinter.readthedocs.org) provides an interface to [jscs](https://github.com/mdevils/node-jscs). It will be used with files that have the “Javascript” or “JavaScript Next” syntax.
+This linter plugin for [SublimeLinter](http://sublimelinter.readthedocs.org) provides an interface to [jscs](https://github.com/mdevils/node-jscs). It will be used with files that have the “Javascript”, “JavaScript Next” or “JavaScript (JSX)” syntax.
 
 ![SublimeLinter-jscs](demo.gif "SublimeLinter-jscs plugin demo")
 
@@ -46,7 +46,7 @@ For general information on how SublimeLinter works with settings, please see [Se
 Since this plugin is executing `jscs` on your system, you may use `.jscsrc` files to configure its behavior. See the [jscs documentation](https://github.com/mdevils/node-jscs#configuration) for more information.
 
 If you wish to run against `jsx` files, you will need to install [esprima-fb](https://www.npmjs.com/package/esprima-fb)
-with `npm install esprima-fb` add the following lines to your `.jscsrc` file:
+with `npm install -g esprima-fb` add the following lines to your `.jscsrc` file:
 
 ```json
 ...

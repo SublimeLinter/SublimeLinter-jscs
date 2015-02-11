@@ -1,0 +1,10 @@
+SublimeLinter-jscs 2.1.0
+-------------------------
+Linter now supports `jsx` files thanks to jonknapp and michael-martin.
+
+You will need to install `esprima-fb` (https://www.npmjs.com/package/esprima-fb)
+with `npm install -g esprima-fb`
+and add the following lines to your `.jscsrc` file:
+
+  "esprima": "esprima-fb",
+  "fileExtensions": [".js", ".jsx"],
