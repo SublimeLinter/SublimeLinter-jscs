@@ -3,7 +3,7 @@ SublimeLinter-jscs
 
 [![Build Status](https://travis-ci.org/SublimeLinter/SublimeLinter-jscs.svg?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-jscs)
 
-This linter plugin for [SublimeLinter](http://sublimelinter.readthedocs.org) provides an interface to [jscs](https://github.com/mdevils/node-jscs). It will be used with files that have the “Javascript”, “JavaScript Next”, “JavaScript (JSX)” or “JavaScript (Babel)” syntax.
+This linter plugin for [SublimeLinter](http://sublimelinter.readthedocs.org) provides an interface to [jscs](https://github.com/mdevils/node-jscs). It will be used with files that have the “Javascript”, “JavaScript Next”, “[JavaScript (JSX)](https://github.com/reactjs/sublime-react)” or “JavaScript (Babel)” syntax.
 
 ![SublimeLinter-jscs](demo.gif "SublimeLinter-jscs plugin demo")
 
