@@ -14,7 +14,6 @@ from SublimeLinter.lint import NodeLinter
 
 
 class Jscs(NodeLinter):
-
     """Provides an interface to jscs."""
 
     syntax = ('javascript', 'html', 'javascriptnext', 'javascript (jsx)', 'javascript (babel)')
