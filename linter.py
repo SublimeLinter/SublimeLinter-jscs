@@ -10,14 +10,15 @@
 
 """This module exports the jscs plugin class."""
 
-from SublimeLinter.lint import Linter
+from SublimeLinter.lint import NodeLinter
 
 
-class Jscs(Linter):
+class Jscs(NodeLinter):
 
     """Provides an interface to jscs."""
 
     syntax = ('javascript', 'html', 'javascriptnext', 'javascript (jsx)', 'javascript (babel)')
+    npm_name = 'jscs'
     cmd = 'jscs -r checkstyle'
     version_args = '--version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
