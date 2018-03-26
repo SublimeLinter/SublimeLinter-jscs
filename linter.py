@@ -13,7 +13,6 @@ class Jscs(NodeLinter):
     )
     multiline = True
     tempfile_suffix = 'js'
-    config_file = ('--config', '.jscsrc', '~')
     defaults = {
         'selector': 'source.js - meta.attribute-with-value'
     }
