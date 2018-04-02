@@ -1,6 +1,0 @@
-SublimeLinter-jscs 1.0.2
--------------------------
-Whereas `jscs` only looks in the linted file’s directory for
-a `.jscs.json` file, this linter plugin now extends that
-behavior by searching the file hierarchy up to the root
-directory and then in the user’s home directory.
